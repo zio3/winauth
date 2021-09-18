@@ -31,6 +31,7 @@ using System.Windows;
 using System.Windows.Forms;
 
 using WinAuth.Resources;
+using System.Diagnostics;
 
 namespace WinAuth
 {
@@ -515,6 +516,7 @@ namespace WinAuth
           {
             case "name":
               Name = reader.ReadElementContentAsString();
+              Trace.TraceInformation($"Name:{Name}");
               break;
 
             case "created":
